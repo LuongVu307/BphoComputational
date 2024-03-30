@@ -13,7 +13,7 @@ def main():
     plt.plot(x, y, marker='o', linestyle='-', color="black", label="No air resistance", markersize=5, markerfacecolor='blue')
     plt.xlabel('x /m')
     plt.ylabel('y above launch height /m')
-    plt.label("Projectile motion model")
+    plt.title("Projectile motion model")
     plt.ylim(0, None)
     plt.xlim(0, None)   
     plt.grid(True)
@@ -28,7 +28,7 @@ def projectile(g, h, theta, v, num=100):
     t_flight = (v_y + np.sqrt(v_y**2 + 2 * g * h)) / g
 
     t = np.linspace(0, t_flight, num=num)
-
+    
     x = v_x * t
     y = h + v_y * t - 0.5 * g * t**2
 
